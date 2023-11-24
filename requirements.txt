@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+jupyter
+scikit-learn
+dataprep
+markupsafe==2.0.1
+requests
+praw
