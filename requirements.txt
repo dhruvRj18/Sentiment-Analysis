@@ -9,3 +9,6 @@ dataprep
 markupsafe==2.0.1
 requests
 praw
+gensim
+xgboost
+tensorflow
