@@ -16,6 +16,7 @@ app = Flask(__name__)
 
 doc2vec_model = Doc2Vec.load('./data/doc2vec_model.pkl')
 xgboost_model = joblib.load('./data/xgboost_model.pkl')
+svc_model = joblib.load('./data/svc_model.pkl')
 
 
 @app.route('/')
@@ -73,7 +74,7 @@ def decode_sentiment(sentiment_label):
 
 def predict_sentiment(text_vector):
     text_vector = np.array(text_vector).reshape(1, -1)
-    sentiment_label = xgboost_model.predict(text_vector)[0]
+    sentiment_label = svc_model.predict(text_vector)[0]
 
     return decode_sentiment(sentiment_label)
 
