@@ -12,3 +12,5 @@ praw
 gensim
 xgboost
 tensorflow
+google-api-python-client
+demoji
